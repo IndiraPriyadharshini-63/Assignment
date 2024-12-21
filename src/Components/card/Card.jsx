@@ -1,24 +1,29 @@
-import React from "react";
-import PageHeading from "../pageHeading/PageHeading";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowTrendUp,
+  faArrowTrendDown,
+  faComment,
+} from "@fortawesome/free-solid-svg-icons";
 
-const Card = () => {
+const Card = ({ card }) => {
   return (
-    <div>
-      <div className=" flex flex-col w-[396px] h-[156px] rounded-[20px] p-6 xl:p-6 mt-3 gap-4 shadow justify-between">
-        <div className="flex">
-          <div>Icon</div>
-          <PageHeading
-            heading="Consulations"
-            size="12px"
-            weight="600"
-            lineHeight="30px"
-          />
-        </div>
-        <div>24</div>
-        <div className="flex ">
-          <div>Icon</div>
-          <div> 15% increase </div>
-        </div>
+    <div className="max-w-sm p-6 gap-4  rounded-[20px] shadow-md">
+      <div className="flex items-center gap-2">
+        <FontAwesomeIcon icon={faComment} className="text-[#667085] text-xl" />
+        <h2 className="text-xs font-semibold text-[#667085]">
+          {card.card.title}
+        </h2>
+      </div>
+
+      <div className="mt-4 text-[32px] font-normal">{card.card.value}</div>
+
+      <div className="mt-4 flex items-center gap-2">
+        <FontAwesomeIcon icon={faArrowTrendUp} className="text-green-500" />
+        <span className="text-sm font-bold text-[#15B79F]">
+          {card.card.increaseValue}
+        </span>
+        <span className="text-sm text-gray-400">Increase</span>
       </div>
     </div>
   );

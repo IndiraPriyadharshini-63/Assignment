@@ -7,23 +7,32 @@ import Settings from "../../assets/Gear.png";
 
 const Sidebar = () => {
   return (
-    <div className="flex-none w-[60px] h-[1080px] bg-[#115E56] justify-between border-r border-[#DCDFE4]">
-      <div className="top">
-        <img src={Brand} alt="Logo" />
+    <div
+      className="flex flex-col justify-between items-start w-[60px]  bg-[#115E56] border-r border-[#DCDFE4] gap-[60px]"
+      style={{ boxSizing: "border-box" }}
+    >
+      <div className="flex flex-col items-center w-full">
+        <div className="p-4 mb-2">
+          <img src={Brand} alt="Logo" className="" />
+        </div>
+
+        <nav className="flex flex-col items-center gap-4 w-full">
+          <button className="w-10 h-10 rounded-md bg-gray-100 hover:bg-gray-200 flex justify-center items-center">
+            <img src={Home} alt="Icon 1" className="w-6 h-6" />
+          </button>
+          <button className=" ">
+            <img src={Chat} alt="Icon 2" className="w-6 h-6" />
+          </button>
+          <button className="">
+            <img src={Community} alt="Icon 2" className="w-6 h-6" />
+          </button>
+        </nav>
       </div>
-      <div className="center list-none">
-        <li>
-          <img src={Home} alt="home" />
-        </li>
-        <li>
-          <img src={Chat} alt="chat" />
-        </li>
-        <li>
-          <img src={Community} alt="community" />
-        </li>
-      </div>
-      <div className="bottom">
-        <img src={Settings} alt="settings" />
+
+      <div className="flex flex-col items-center mb-4 w-full">
+        <button className="">
+          <img src={Settings} alt="Settings Icon" className="w-6 h-6" />
+        </button>
       </div>
     </div>
   );
