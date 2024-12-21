@@ -10,7 +10,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChartBar, faChartColumn } from "@fortawesome/free-solid-svg-icons";
+import { faChartColumn } from "@fortawesome/free-solid-svg-icons";
 
 ChartJS.register(
   CategoryScale,
@@ -45,7 +45,7 @@ const PastPeriodGraph = () => {
           stepSize: 5,
         },
         grid: {
-          color: "#e5e7eb", // Light gray grid lines
+          color: "#e5e7eb",
         },
       },
     },
@@ -57,14 +57,14 @@ const PastPeriodGraph = () => {
       {
         label: "Consultations",
         data: [20, 15],
-        backgroundColor: "#a7f3d0", // Light green
+        backgroundColor: "#a7f3d0",
         borderRadius: 4,
         barThickness: 40,
       },
       {
         label: "Orders closed",
         data: [15, 10],
-        backgroundColor: "#115e56", // Dark green
+        backgroundColor: "#115e56",
         borderRadius: 4,
         barThickness: 40,
       },

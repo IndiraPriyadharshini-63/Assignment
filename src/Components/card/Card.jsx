@@ -1,10 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowTrendUp,
-  faArrowTrendDown,
-  faComment,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowTrendUp, faComment } from "@fortawesome/free-solid-svg-icons";
 
 const Card = ({ card }) => {
   return (
